@@ -1,0 +1,17 @@
+BACKPATH=$PATH
+export BACKPATH
+
+PWD1=~/OpenWrt-SDK/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2
+PWD2=~/OpenWrt-SDK/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2
+
+PATH=$PWD1/bin:$PATH
+export PATH
+
+STAGING_DIR=$PWD1
+export STAGING_DIR
+
+CFLAGS=-I"$PWD2/usr/include"
+export CFLAGS
+
+LDFLAGS=-L"$PWD2/usr/lib"
+export LDFLAGS
