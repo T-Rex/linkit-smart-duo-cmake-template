@@ -1,8 +1,9 @@
 BACKPATH=$PATH
 export BACKPATH
 
-PWD1=~/OpenWrt-SDK/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2
-PWD2=~/OpenWrt-SDK/staging_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2
+OPENWRT_SDK_DIR=`find ~ -type d -name OpenWrt-SDK*`
+PWD1=`find $OPENWRT_SDK_DIR/staging_dir -type d -name toolchain-mipsel_*`
+PWD2=`find $OPENWRT_SDK_DIR/staging_dir -type d -name target-mipsel_*`
 
 PATH=$PWD1/bin:$PATH
 export PATH
